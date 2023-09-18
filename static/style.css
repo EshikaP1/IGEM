@@ -1,40 +1,13 @@
-/* Set the background color and font */
-body {
-    background-color: #ff69b4; /* Pink color */
-    font-family: 'CuteFont', cursive;
-}
 
-/* Change the header and footer colors */
-.header, .footer {
-    background-color: #ff69b4; /* Pink color */
-}
+    /* Add hot pink background color */
+    body {
+      background-color: hotpink;
+    }
+    
+    /* Add white font color and set font-family */
+    p {
+      color: white;
+      font-family: Arial, sans-serif;
+    }
 
-/* Customize the buttons */
-.btn {
-    background-color: #ff69b4; /* Pink color */
-    color: white;
-    border: none;
-    font-weight: bold;
-}
 
-/* Customize links */
-a {
-    color: #ff69b4; /* Pink color */
-    text-decoration: none;
-}
-
-/* Add a cute image to the background */
-body::after {
-    content: '';
-    background-image: url('path/to/cute-image.png');
-    background-size: cover;
-    opacity: 0.1; /* Adjust the opacity as needed */
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: fixed;
-    z-index: -1;
-}
-
-  

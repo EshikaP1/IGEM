@@ -1,0 +1,106 @@
+{% extends "layout.html" %} {% block title %}Survey{% endblock %} {% block lead
+%}{% endblock %} {% block page_content %}
+
+<script src="{{ url_for('static', filename = 'fade-in.js') }}"></script>
+
+<div>
+  <div>
+    <div style="background-color: #dbf9fc" class="box fade-in">
+      <h1 class="fade-in">Overview</h1>
+      <hr class="fade-in" />
+      <p class="fade-in">
+        In order to evaluate our community’s understanding of microplastics, the
+        2023 iGEM team at Del Norte High School released a survey on August 1,
+        2022. The survey included 20 original questions. They were split up into
+        two different question formats: knowledge-based questions and personal
+        questions. Knowledge-based questions included both true or false
+        questions as well as multiple-choice questions. For each question, we
+        had a “not sure” option in order to better deter people from simply
+        guessing the answer, ensuring greater accuracy in our findings.
+      </p>
+    </div>
+    <div class="box fade-in">
+      <h1 class="fade-in">Questions</h1>
+      <hr class="fade-in" />
+      <p>...</p>
+    </div>
+
+    <div style="background-color: #dbf9fc" class="box fade-in">
+      <h1 class="fade-in">Survey Analysis</h1>
+      <hr class="fade-in" />
+      <p class="fade-in">
+        After carefully analyzing the data, we noticed a few patterns:
+      </p>
+      <p class="fade-in">
+        TThere were a total of 60 responses received. Out of the 13 questions,
+        the mean accuracy was 3.67/13 or 28.23% while the median was 3/13 or
+        23%. The range of the correct answers was from 0-9 points, with 0/13
+        being the lowest and 9/13 being the highest. Across all of the survey
+        questions, the mean number of correct responses for each question was
+        16.92/ 60 The question with the highest number of correct responses was
+        “Multiple Choice: Most single-use water bottles are made from which type
+        of plastic?” with 34/60 correct responses. This is an indication that
+        many people have an understanding or have heard of a common application
+        of plastic, like water bottles, and PET.
+      </p>
+      <img
+        src="https://static.igem.wiki/teams/4386/wiki/survey/graph3.png"
+        class="center fade-in"
+        width="50%"
+      />
+      <br />
+      <p class="fade-in">
+        In contrast, the question with the lowest number of correct responses
+        was Question 12, “Multiple Choice: Multiple Choice: What percentage is
+        closest to the proportion of clothes that are made up of synthetic
+        fibers (polyester, nylon, etc.)?”, with only 6/60 correct responses.
+        Another question with a low number of correct responses was the question
+        “Multiple choice: How large is the Great Pacific Garbage Patch??”, with
+        9/60 correct responses. We noticed a few patterns, like how more people
+        got the later questions, like 8-13 more incorrect, than 1-7. This could
+        mean that people thought that they knew the right answer, which is why
+        they guessed instead of choosing, the “Not Sure” choice. This
+        demonstrates how many people think that they know much about plastic
+        pollution, but when it comes to looking at the correct responses, they
+        are very low. This would be a general trend that we can get from our
+        audience, that they know of the topic, but are not very knowledgeable in
+        depth about plastic pollution. Since our project is based on PET
+        degradation, it was important for us to assess our community's
+        understanding of plastic pollution and fill in the gaps with our
+        research.
+      </p>
+      <p class="fade-in">
+        With this in mind, we then examined the number of times survey-takers
+        put “not sure” as their answer for all the questions. The average number
+        of “not sure” answers between the 13 questions was 23.77/60. The highest
+        number of “not sure” answers on a certain question was 28/60 while the
+        lowest number of “not sure” answers was 14/60. We found that there is an
+        overall higher number of “not sure” answers in the multiple-choice
+        questions (mean of 26.6/60) in contrast to the overall lower number of
+        “not sure” answers in the true or false questions (mean of 22/60). This
+        tells us that people are less confident about their answers when the
+        options are more specific numbers, compared to a 50/50 chance of getting
+        the answer correct with a true and false. Again, this is an indication
+        that the survey takers had insufficient knowledge and were instead
+        relying on guessing or the ‘Not Sure’ option. The results of this survey
+        helped us recognize that we could make a significant improvement in our
+        community’s understanding of PET degradation, plastic pollution, and
+        microplastics– all of which are topics that are essential to
+        understanding our project. This inspired us to post short infographics
+        with the correct answers to the survey questions on our Instagram page,
+        in order to give our followers the opportunity to check their answers
+        and learn from their mistakes.
+      </p>
+    </div>
+    <div class="box fade-in">
+      <h1 class="fade-in">Privacy Statement</h1>
+      <hr class="fade-in" />
+      <p class="fade-in">
+        The information from this survey is purely for statistical purposes.
+        Each response was recorded anonymously with consent, and no personal
+        data was collected.
+      </p>
+    </div>
+  </div>
+</div>
+{% endblock %}

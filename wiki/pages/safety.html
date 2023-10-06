@@ -1,50 +1,118 @@
-{% extends "layout.html" %}
-  
-{% block title %}Safety{% endblock %}
-{% block lead %}Describe all the safety issues of your project.{% endblock %}
+{% extends "layout.html" %} {% block title %}Safety{% endblock %} {% block lead
+%}{% endblock %} {% blockpage_content %}
 
-{% block page_content %}
+<script src="{{ url_for('static', filename = 'fade-in.js') }}"></script>
 
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Safety and Security Award</h4>
-      <p>Synthetic biology will need to be used safely and securely if local people are to solve local problems all around the world. The Safety and Security Committee is challenging teams to apply biological engineering approaches to manage risks associated with synthetic biology. Can you take the next step in incremental progress towards knowledge, understanding, and tools that will make the use of synthetic biology safer and more secure?</p>
-      <p>To compete for the Safety and Security award, please describe your work on this page and also fill out the description on the <a href="https://competition.igem.org/deliverables/judging-form">judging form</a>.</p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/awards">2023 Awards Page</a> for more information.</p>
-    </div>
-  </div>
+<div style="background-color: #dbf9fc" class="box fade-in">
+  <h1 class="fade-in">Overview</h1>
+  <hr class="fade-in" />
+  <p class="fade-in">
+    Team DNHS_SanDiego_CA is in full compliance with iGEM's safety and security
+    guidelines. During the project's design, construction, and implementation
+    phases, our utmost priority has consistently been safety. This commitment
+    extends to incorporating special procedures, practices, and materials as
+    necessary.
+  </p>
 </div>
 
-<div class="row mt-4">
-  <div class="col">
-    <h2>What should this page contain?</h2>
-    <hr>
-    <p>On this page of your wiki, you should write about how you are addressing any safety issues in your project. The wiki is a place where you can go beyond the questions on the safety forms, and write about whatever safety topics are most interesting in your project. (You do not need to copy your safety forms onto this wiki page.)</p>
-    <div class="bd-callout bd-callout-info">
-      <p>Please visit the <a href="https://responsibility.igem.org/safety-policies/introduction">Safety Policies page</a> to find this year's safety requirements & deadlines, and to learn about safe & responsible research in iGEM.</p>
-    </div>
-  </div>
+<div class="box fade-in">
+  <h1 class="fade-in">Lab Safety</h1>
+  <hr class="fade-in" />
+  <p class="fade-in">
+    All experiments were conducted at Scripps Research Institute in Badran Lab.
+    Our working environment is a standard microbiological lab and is classified
+    as biosafety level 1. There are chairs at each bench, multiple biohazard
+    trash cans, and sinks in every row. At the back of the open bench region are
+    -80 degrees Celsius freezers. Beside the open bench lab space is the
+    incubator room. This room contains a variety of incubators and freezers,
+    along with a fume hood. The neighboring spaces are temperature-regulated
+    rooms that are used to run experiments in hot (37 Celcius) or cold (4
+    Celcius) environments. Finally, the dark room is used for reading gel
+    electrophoresis results.
+  </p>
+  <p class="fade-in">
+    All experiments were thoroughly researched and performed with the guidance
+    of scientists at the lab. For the conduction of the experiments, we used
+    open bench areas, sterilized equipment, and biohazard bins to prevent
+    contamination.
+  </p>
+  <p class="fade-in">
+    Our project exclusively involves activities that adhere to all regulations
+    (Scripps-specific biosafety regulations [1] and California biosafety
+    regulations [2]), and all organisms and components utilized are listed as
+    compliant on the iGEM competition's White List.
+  </p>
 </div>
 
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>Safe Project Design</h2>
-    <hr>
-    <p>Does your project include any safety features? Have you made certain decisions about the design to reduce risks? Write about them here! For example:</p>
-    <ul>
-      <li>Choosing a non-pathogenic chassis</li>
-      <li>Choosing parts that will not harm humans / animals / plants</li>
-      <li>Substituting safer materials for dangerous materials in a proof-of-concept experiment</li>
-      <li>Including an "induced lethality" or "kill-switch" device</li>
-    </ul>
-  </div>
-  <div class="col-lg-4">
-    <h2>Safe Lab Work</h2>
-    <hr>
-    <p>What safety procedures do you use every day in the lab? Did you perform any unusual experiments, or face any unusual safety issues? Write about them here!</p>
-  </div>
+<!--pics of badran lab here-->
+
+<div style="background-color: #dbf9fc" class="box fade-in">
+  <h1 class="fade-in">Project Safety</h1>
+  <hr class="fade-in" />
+  <p class="fade-in">
+    We performed titration of our strains with Isopropyl
+    ß-D-1-thiogalactopyranoside (IPTG) and terephthalic acid (TPA) via an assay
+    process. The media being used is Davis Rich Media with carbenicillin and
+    spectinomycin.
+  </p>
+  <p class="fade-in">
+    Our team designed parts pIGEM1 and pIGEM2, which we will upload to the
+    repository. Throughout the experimentation, we will be using DMSO and
+    ethidium bromide in controlled environments. When transferring the TPA into
+    the tubes for serial dilutions, the TPA was kept in a DMSO solution, so
+    contact with the solution through the transfer process is the only way for
+    accidental contact with the compound. Transfer of Ethidium Bromide from one
+    container to another was performed in a controlled environment with
+    micropipettes to limit safety hazards.
+  </p>
+</div>
+
+<div class="box fade-in">
+  <h1 class="fade-in">Product Safety</h1>
+  <hr class="fade-in" />
+  <p class="fade-in">
+    We used an MG1655-derived strain of Escherichia coli in building plasmids
+    using various importers like MucK and TpaK, transcription factors, and
+    promoters. MG1655 is non-pathogenic and poses minimal threat to human
+    safety.
+  </p>
+</div>
+
+<div style="background-color: #dbf9fc" class="box fade-in">
+  <h1 class="fade-in">Consumer Safety</h1>
+  <hr class="fade-in" />
+  <p class="fade-in">
+    We wanted to address how consumers may feel about having and using a device
+    that contains genetically engineered organisms. Some people may not want to
+    be in close contact with E. coli because they may worry that it would be
+    dangerous to their health. We plan to address this concern by educating
+    those who wish to use this product by explaining that the MG1655-derived
+    strain of E. coli used in this device is not harmful in any way to the human
+    body and will not result in any illnesses. This explanation may be placed on
+    the label of our product device in order for consumers to be aware of their
+    safety. In addition, the early use of our device is marketed towards
+    scientists who are aware of safe lab practices, so they should be aware of
+    the components of our device and possible concerns.
+  </p>
+</div>
+
+<div class="box fade-in">
+  <h1 class="fade-in">Testing Safety</h1>
+  <hr class="fade-in" />
+  <p class="fade-in">?</p>
+</div>
+
+<div style="background-color: #dbf9fc" class="box fade-in">
+  <h1 class="fade-in">References</h1>
+  <hr class="fade-in" />
+  <p class="fade-in">
+    [1] Safety Standards - Scripps Research. (n.d.-a).
+    https://www.scripps.edu/lotz/pdfs/SafetyStandards.pdf
+  </p>
+  <p class="fade-in">
+    [2] Giso. (n.d.). California code of regulations, Title 8, Section 5193.
+    bloodborne pathogens. https://www.dir.ca.gov/title8/5193.html
+  </p>
 </div>
 
 {% endblock %}

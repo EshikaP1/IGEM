@@ -1,57 +1,154 @@
-{% extends "layout.html" %}
-  
-{% block title %}Project Description{% endblock %}
+{% extends "layout.html" %} {% block title %}Project Description{% endblock %}
 {% block lead %}Describe how and why you chose your iGEM project.{% endblock %}
-
 {% block page_content %}
 
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Bronze Medal Criterion #3</h4>
-      <p>Describe how and why you chose your iGEM project.<p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/medals">2023 Medals Page</a> for more information.</p>
-    </div>
-  </div>
+<script src="{{ url_for('static', filename = 'fade-in.js') }}"></script>
+
+<div style="background-color: #dbf9fc" class="box fade-in">
+  <h1 class="heading fade-in">Inspiration</h1>
+  <hr class="fade-in" />
+  <p class="paragraph fade-in">
+    Our team is located in San Diego, California, where the beach and outdoors
+    are a major part of our lives. Many members of our team spend their free
+    time outdoors, and choose to enjoy the nature around them. However,
+    regardless of the location, we all notice something that intrudes on the
+    beauty around us: plastic waste. The beach is often littered with plastic
+    bottles or bags, even in areas with a lot of people. On the roads we take to
+    school we see trash around us. Even in our own neighborhoods, we see plastic
+    waste everywhere. While looking further into this issue, we found a specific
+    plastic, polyethylene terephthalate (PET), which has contributed to a
+    majority of plastic pollution. The National Renewable Energy Laboratory
+    (NREL) finds that 82 million tons of PET is manufactured every year, and PET
+    plastics are one of the largest sources of plastic waste. The NREL finds
+    that most methods used for recycling PET plastics are inefficient and result
+    in less profitable products [1]. We wanted to play an active part in
+    developing solutions to degrade the plastics, and reduce plastic waste in
+    our community. While researching, we found that PET is degraded through
+    hydrolysis, and during this process terephthalic acid (TPA) is generated.
+    Furthermore, we found that several microorganisms hold the capabilities to
+    degrade PET, because of the specific enzymes found inside these
+    microorganisms [2]. However, we realized there isn’t an efficient way to
+    measure the amount of PET degraded. We decided we wanted to focus on a
+    biosensor that could quantify plastic degradation. Since the amount of TPA
+    generated is proportional to the amount of plastic degraded, we decided to
+    develop a plasmid that can detect TPA. In the presence of TPA, this plasmid
+    will create a fluorescence signal that can be detected. Developing this
+    biosensor will allow scientists to measure how much PET is being degraded,
+    which will allow them to measure and improve efficiency. We hope our project
+    works towards educating others about the effects of PET plastic and is a
+    step forward in solving the problem of plastic pollution.
+  </p>
 </div>
 
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>What should this page contain?</h2>
-    <hr>
-    <ul>
-      <li>A clear and concise description of your project.</li>
-      <li>A detailed explanation of why your team chose to work on this particular project.</li>
-      <li>References and sources to document your research.</li>
-      <li>Use illustrations and other visual resources to explain your project.</li>
-    </ul>
-  </div>
-  <div class="col-lg-4">
-    <h2>Inspirations</h2>
-    <hr>
-    <ul>
-      <li><a href="https://2022.igem.wiki/dtu-denmark/description">2022 DTU-Denmark</a></li>
-      <li><a href="https://2019.igem.org/Team:ITESO_Guadalajara/Description">2019 ITESO Guadalajara</a></li>
-      <li><a href="https://2020.igem.org/Team:Technion-Israel/Description">2020 Technion Israel</a></li>
-      <li><a href="https://2020.igem.org/Team:Botchan_Lab_Tokyo/Description">2020 Botchan Lab Tokyo</a></li>
-      <li><a href="https://2020.igem.org/Team:St_Andrews/Description">2020 St Andrews</a></li>
-      <li><a href="https://2020.igem.org/Team:MIT/Description">2020 MIT</a></li>
-    </ul>
-  </div>
+<div class="box fade-in">
+  <h1 class="heading fade-in">Synthetic Biology Application</h1>
+  <hr class="fade-in" />
+  <p class="paragraph fade-in">
+    Our project involves turning to biosensors as a complementary tool to
+    conventional enzyme-directed evolution approaches in scientists’ quest to
+    improve the detection and quantification of terephthalic acid (TPA) produced
+    during the enzymatic breakdown of polyethylene terephthalate (PET). The
+    complex molecular mechanism of cells, where genes alone lie inactive unless
+    coordinated by other biological components, is used by biosensors. An
+    importer protein (mucK) for TPA transport, a transcription factor (tpaR)
+    sensitive to TPA binding, and the mScarlet-I and GFP reporter genes under
+    control of tpaR-responsive promoters for signal detection make up a TPA
+    biosensor system that has been designed in this context [3]. TPA binding to
+    tpaR causes conformational changes that activate the transcription of
+    mScarlet as a result of the process. The goal is to develop a more reliable
+    biosensor with a wider dynamic range. Additionally, to increase sensitivity
+    and specificity of the biosensor system, we are exploring changes to: the
+    tpaR-responsive promoter (tpaAp), as the reporter genes, GFP and mScarlet,
+    and trying multiple TPA importers. Previous reports have identified
+    mutations in mucK that increase its ability to import TPA; based on this, we
+    may explore mutagenesis studies to try to further increase mucK import
+    efficiency and use our optimized biosensor to screen mutant libraries.These
+    efforts are greatly aided by computational modeling and molecular docking
+    simulations, which aid in predicting interactions and guide subsequent
+    mutagenesis experiments. Researchers want to create a highly effective TPA
+    biosensor that could change the monitoring of PET plastic deterioration in
+    cellular systems by methodically examining these elements and their
+    interactions.
+  </p>
 </div>
 
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>Some advice</h2>
-    <hr>
-    <p>We encourage you to put up a lot of information and content on your wiki, but we also encourage you to include summaries as much as possible. If you think of the sections in your project description as the sections in a publication, you should try to be concise, accurate, and unambiguous in your achievements. Your Project Description should include more information than your project abstract.</p>
-  </div>
-  <div class="col-lg-4">
-    <h2>References</h2>
-    <hr>
-    <p>iGEM teams are encouraged to record references you use during the course of your research. They should be posted somewhere on your wiki so that judges and other visitors can see how you thought about your project and what works inspired you.</p>
-  </div>
+<div style="background-color: #dbf9fc" class="box fade-in">
+  <h1 class="heading fade-in">Goals</h1>
+  <hr class="fade-in" />
+  <p class="paragraph fade-in">
+    The main goal of our project is to design a biosensor to monitor PET
+    hydrolysis through terephthalic acid (TPA) detection that can be used by
+    researchers to accurately quantify plastic degradation. We noticed that
+    there were not accurate and reliable sensors for scientists to use. Thus, we
+    decided to focus our project mainly on the detection of PET degradation.
+  </p>
+  <p class="paragraph fade-in">
+    When we surveyed people, we realized that not many people knew about the
+    methods of plastic degradation or its impact on the environment. Through our
+    social media platforms, we have made it our goal to increase awareness of
+    plastic in the general community.
+  </p>
+  <p class="paragraph fade-in">
+    We believe it is extremely important to educate, inspire, and enable young
+    students in the field of biology. We conducted two sessions of 5-day intro
+    to synthetic biology and forensics summer camp for 1th-5th graders to
+    hopefully spark their interest in the area.
+  </p>
+  <p class="paragraph fade-in">
+    Improving science communication has also been a significant tenet,
+    especially during our iGEM season. We held a symposium to accomplish this
+    goal of ours and invited experts of PET and plastic degradation to provide
+    valuable feedback on our project and learn about potential strategies we
+    could implement to improve our research.
+  </p>
+</div>
+
+<div class="box fade-in">
+  <h1 class="heading fade-in">References</h1>
+  <hr class="fade-in" />
+  <p class="paragraph fade-in">
+    [1] Oct. 13, 2021 | Contact media relations Share. (n.d.).
+    <em>
+      Researchers engineer microorganisms to tackle pet plastic pollution.
+    </em>
+    NREL.gov.
+    https://www.nrel.gov/news/program/2021/researchers-engineer-microorganisms-to-tackle-pet-plastic-pollution.html#:~:text=More%20than%2082%20million%20metric
+  </p>
+  <p class="paragraph fade-in">
+    [2] Khairul Anuar, N. F. S., Huyop, F., Ur-Rehman, G., Abdullah, F., Normi,
+    Y. M., Sabullah, M. K., & Abdul Wahab, R. (2022, October 20).
+    <em>
+      An overview into polyethylene terephthalate (PET) hydrolases and efforts
+      in tailoring enzymes for improved plastic degradation.
+    </em>
+    MDPI. https://doi.org/10.3390/ijms232012644
+  </p>
+  <p class="paragraph fade-in">
+    [3] Pardo, I., Jha, R. K., Bermel, R. E., Bratti, F., Gaddis, M., McIntyre,
+    E., … Johnson, C. W. (2020). Gene amplification, laboratory evolution, and
+    biosensor screening reveal MucK as a terephthalic acid transporter in
+    Acinetobacter baylyi ADP1. <em> Metabolic Engineering, 62, </em> 260–274.
+    https://doi.org/10.1016/j.ymben.2020.09.009
+  </p>
+  <p class="paragraph fade-in">
+    [4] A focused review on recycling and hydrolysis techniques of polyethylene
+    ... (n.d.).
+    https://4spepublications.onlinelibrary.wiley.com/doi/10.1002/pen.26406
+  </p>
+  <p class="paragraph fade-in">
+    [5] Nature Publishing Group. (n.d.). Nature news.
+    https://www.nature.com/scitable/blog/bio2.0/synthetic_biology_at_home/
+  </p>
+  <p class="paragraph fade-in">
+    [6] Urbanek, A. K., Kosiorowska, K. E., & Mirończuk, A. M. (2021, November
+    30).
+    <em>
+      Current knowledge on polyethylene terephthalate degradation by genetically
+      modified microorganisms.
+    </em>
+    Frontiers in bioengineering and biotechnology.
+    https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8669999/
+  </p>
 </div>
 
 {% endblock %}

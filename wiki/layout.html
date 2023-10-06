@@ -1,46 +1,137 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
+    <style>
+      #scroll-progress {
+        position: fixed;
+        top: 0;
+        width: 0%;
+        height: 4px;
+        background: #3c8990;
+        z-index: 10000;
+      }
+
+      /* scrollbar */
+      /* Works on Firefox */
+      * {
+        scrollbar-width: thin;
+        scrollbar-color: #3c8990 white;
+      }
+
+      /* Works on Chrome, Edge, and Safari */
+      *::-webkit-scrollbar {
+        width: 12px;
+      }
+
+      *::-webkit-scrollbar-track {
+        background: white;
+        box-shadow: inset 0 0 5px #213032;
+        border-radius: 10px;
+      }
+
+      *::-webkit-scrollbar-thumb {
+        background-color: #3c8990;
+        border-radius: 20px;
+        border: 3px #3c8990;
+      }
+
+      ::-webkit-scrollbar-thumb:hover {
+        background: #27575c;
+      }
+      /* end scroll bar */
+
+      /*loading */
+      .loader {
+        position: fixed;
+        z-index: 99;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #F6F3E8;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .loader > img {
+        width: 600px;
+      }
+
+      .loader.hidden {
+        animation: fade-out 1s;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes fade-out {
+        100% {
+          opacity: 100%;
+          visibility: hidden;
+        }
+      }
+    </style>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="https://static.igem.wiki/common/icons/favicons/igem-2022.svg"/>
-    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="shortcut icon"
+      href="https://static.igem.wiki/common/icons/favicons/igem-2022.svg"
+    />
+    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/" />
 
     <!-- Bootstrap CSS -->
-    <link href="{{ url_for('static', filename = 'bootstrap.min.css') }}" rel="stylesheet">
+    <link
+      href="{{ url_for('static', filename = 'bootstrap.min.css') }}"
+      rel="stylesheet"
+    />
 
     <!-- Custom CSS -->
-    <link href="{{ url_for('static', filename = 'style.css') }}" rel="stylesheet">
+    <link
+      href="{{ url_for('static', filename = 'style.css') }}"
+      rel="stylesheet"
+    />
 
-    <title>{% block title %}{% endblock %} | DNHS-SanDiego-CA - iGEM 2023</title>
+    <title>
+      {% block title %}{% endblock %} | DNHS_SanDiego_CA - iGEM 2022
+    </title>
+  </head>
+  <body>
+    <div class="loader">
+      <img src="https://static.igem.wiki/teams/4386/wiki/loading1.gif" />
+    </div>
+    <!-- Navigation -->
+    {% include 'menu.html' %}
+    <div id="scroll-progress"></div>
 
-</head>
-<body>
-  <!-- Navigation -->
-  {% include 'menu.html' %}
-
-  <!-- Header -->
-  <header class="bg-hero py-5 mb-5">
-    <div class="container h-100">
-      <div class="row h-100 align-items-center">
-        <div class="col-lg-12">
-          <h1 class="display-4 text-white mt-5 mb-2">{{ self.title() }}</h1>
-	        <p class="lead mb-5 text-white-50">{% block lead %}{% endblock %}</p>
+    <!-- Header -->
+    <header class="bg-hero py-5 mb-5">
+      <div class="container h-100">
+        <div class="row h-100 align-items-center">
+          <div class="col-lg-12">
+            <h1 class="mt-5 mb-2" style="font-family: 'Londrina Solid'">
+              {{ self.title() }}
+            </h1>
+            <p class="lead mb-5 text-white-50">
+              {% block lead %}{% endblock %}
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <!-- Page Content -->
-  <div class="container">
-    {% block page_content %}{% endblock %}
-  </div>
+    <!-- Page Content -->
+    <div class="container">{% block page_content %}{% endblock %}</div>
 
-  <!-- Footer: MUST mention license AND have a link to team wiki's repository on gitlab.igem.org -->
-  {% include 'footer.html' %}
+    <!-- Footer: MUST mention license AND have a link to team wiki's repository on gitlab.igem.org -->
+    {% include 'footer.html' %}
 
-  <!-- Bootstrap Bundle with Popper -->
-  <script src="{{ url_for('static', filename = 'bootstrap.bundle.min.js') }}"></script>
-</body>
+    <!-- Wiki Tools: Teams are allowed to remove it 
+  {% include 'wiki-tools.html' %} -->
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename = 'bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'scroll-progress.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'loader.js') }}"></script>
+    <script src="{{ url_for('static', filename = 'fade-in.js') }}"></script>
+  </body>
 </html>

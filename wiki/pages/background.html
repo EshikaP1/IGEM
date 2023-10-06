@@ -1,0 +1,165 @@
+{% extends "layout.html" %} {% block title %}Background{% endblock %} {% block
+lead %}{% endblock %} {% block page_content %}
+
+<style>
+  div.image-gallery {
+    display: block;
+    background-color: #ffffff;
+  }
+</style>
+<script src="{{ url_for('static', filename = 'fade-in.js') }}"></script>
+
+<div style="background-color: #dbf9fc" class="box fade-in">
+  <h1 class="heading fade-in">The Problem</h1>
+  <hr class="fade-in" />
+  <p class="paragraph fade-in">
+    Polyethylene terephthalate, also known as PET, is a thermoplastic polymer
+    resin of the polyester family, semi-crystalline, and non-biodegradable. PET
+    can be a transparent, amorphous thermoplastic when rapidly cooled, but when
+    cooled slowly, it acts as a semi-crystalline plastic. PET is produced from
+    the polymerization of ethylene glycol (EG) and terephthalic acid (TPA) [10].
+  </p>
+  <div class="image-gallery fade-in">
+    <img width="50%" src="" />
+    <img width="50%" src="" />
+    <div class="clear"></div>
+  </div>
+  <p class="caption fade-in">[4]</p>
+  <br />
+  <p class="paragraph fade-in">
+    PET can be processed via typical molding (injection, blown, or extrusion).
+    It is used to fabricate thin layer products in the form of a stretched film,
+    and can also fabricate carbonated beverage bottles because of its strength,
+    toughness, stability, and heat-resistant material.
+  </p>
+  <p class="paragraph fade-in">
+    Despite its convenient use in various products, PET waste is a significant
+    portion of plastic pollution (Kim et al., 2020). The use of plastics has
+    become an intrinsic part of modern society, with annual manufacturing
+    surpassing 350 million metric tons, PET being one of the most extensively
+    used [7]. In 2017, PET production capacity exceeded 30 million tons per
+    annum. 485 billion PET bottles were manufactured in 2016 and 583.3 billion
+    plastic bottles were predicted to be manufactured in 2021 [8]. PET’s
+    exceptional properties of durability, mechanical strength, and transparency
+    cause it to be incorporated in almost every disposable carbonated bottle.
+    But the short lifetime of the large-volume products it is used in has
+    recently brought attention to researchers understanding the serious
+    implications of continued manufacturing of nonbiodegradable compounds. This
+    has sparked scientists to conduct life cycle assessment (LCA) analyses; an
+    LCA conducted by Alfarsi and Primadasa underscored that the manufacturing
+    process of PET contributes to 49 environmental impact categories, including
+    global warming potential, human toxicity, and marine aquatic ecotoxicity
+    (Baldowska-Witos et al., 2021). In previous years, there has been increasing
+    amounts of research done in attempts to degrade or detect PET levels in a
+    given system. However, they have been proven unsuccessful thus far.
+  </p>
+  <p class="paragraph fade-in">
+    A recent finding noted endogenous ADP1 muconate transporter MucK, a member
+    of the major facilitator superfamily, as a potentially more efficient
+    alternative to TpaK, a TPA transporter, at enhancing TPA uptake [2]. We are
+    leveraging this research to develop a biosensor using plasmids to measure
+    TPA production, which can assist in monitoring PET degradation [6]. By
+    building plasmids using various importers like MucK and TpaK, transcription
+    factors, promoters, and sigma factors (subunits of all bacterial RNA
+    polymerases), we can find the most specific and efficient combination to
+    detect TPA and therefore PET as a whole [5]. By integrating sfGFP and
+    mScarlet, different fluorescent proteins, into our plasmids, we will use the
+    level of fluorescence to determine the relative amount of TPA present,
+    thereby determining the extent of PET hydrolysis.
+  </p>
+  <p class="paragraph fade-in">
+    In addition to developing a plasmid biosensor to detect TPA, we remain
+    interested in investigating how similar TpaK and MucK are to each other, at
+    the nucleotide, amino acid, and structural levels. In our Docking efforts,
+    we will translate the sequences of both genes from the plasmids we used, and
+    use AlphaFold to predict the structures. Finally, with Pymol, we can import
+    these structures and assess their overlay. Ultimately, our project,
+    designing a biosensor to detect the TPA, can be used by other scientists in
+    their research to find more effective ways to degrade PET. They can then
+    potentially confirm if their degradation methods are efficient enough by
+    determining how much of the thermoplastic polyester resin has broken down.
+  </p>
+</div>
+<div class="box fade-in">
+  <h1 class="heading fade-in">References</h1>
+  <hr class="fade-in" />
+  <p class="paragraph fade-in">
+    [1] Allison Z. Werner (2021, July 12).
+    <em>
+      Tandem Chemical Deconstruction and biological upcycling of poly(ethylene
+      terephthalate) to β-ketoadipic acid by pseudomonas Putida KT2440.
+    </em>
+    Metabolic Engineering.
+    https://www.sciencedirect.com/science/article/pii/S1096717621001154
+  </p>
+  <p class="paragraph fade-in">
+    [2] Beckham, G. T., Bentley, G. J., Choi, K. Y., Franden, M. A., Herrou, J.,
+    Jha, R. K., Johnson, C. W., Livak, K. J., Portnoy, V. A., Rorrer, N. A.,
+    Sandberg, T. E., Schmidt-Rose, T., … Acero, E. H. (2020, October 1).
+    <em>
+      Gene amplification, laboratory evolution, and Biosensor screening reveal
+      Muck as a terephthalic acid transporter in Acinetobacter Baylyi ADP1.
+    </em>
+    Metabolic Engineering.
+    https://www.sciencedirect.com/science/article/abs/pii/S1096717620301543
+  </p>
+  <p class="paragraph fade-in">
+    [3] Bell, E. L., Smithson, R., Kilbride, S., Foster, J., Hardy, F. J.,
+    Ramachandran, S., Tedstone, A. A., Haigh, S. J., Garforth, A. A., Day, P. J.
+    R., Levy, C., Shaver, M. P., & Green, A. P. (2022, August 11).
+    <em>
+      Directed evolution of an efficient and thermostable pet depolymerase.
+    </em>
+    Nature News. https://www.nature.com/articles/s41929-022-00821-3
+  </p>
+  <p class="paragraph fade-in">
+    [4] Carr, C. M., Clarke, D. J., & Dobson, A. D. W. (2020, October 19).
+    <em>
+      Microbial polyethylene terephthalate hydrolases: Current and future
+      perspectives.
+    </em>
+    Frontiers.
+    https://www.frontiersin.org/articles/10.3389/fmicb.2020.571265/full
+  </p>
+  <p class="paragraph fade-in">
+    [5] Heyde SAH;Arnling Bååth J;Westh P;Nørholm MHH;Jensen K; (n.d.).
+    <em>
+      Surface display as a functional screening platform for detecting enzymes
+      active on pet.
+    </em>
+    Microbial cell factories. https://pubmed.ncbi.nlm.nih.gov/33933097/
+  </p>
+  <p class="paragraph fade-in">
+    [6] Meyer, A. J., Segall-Shapiro, T. H., Glassey, E., Zhang, J., & Voigt, C.
+    A. (2018, November 26).
+    <em
+      >Escherichia coli “marionette” strains with 12 highly optimized
+      small-molecule sensors.
+    </em>
+    Nature News. https://www.nature.com/articles/s41589-018-0168-3
+  </p>
+  <p class="paragraph fade-in">
+    [7]
+    <em> Pet global bottle production 2021. </em> Statista.
+    https://www.statista.com/statistics/723191/production-of-polyethylene-terephthalate-bottles-worldwide/
+  </p>
+  <p class="paragraph fade-in">
+    [8] <em> Plastic Insight. </em> Plasticsinsight.com. (n.d.).
+    https://www.plasticsinsight.com/resin-intelligence/resin-prices/polyethylene-terephthalate/Published
+    by Statista Research Department, & 24, M. (2023, March 24).
+  </p>
+  <p class="paragraph fade-in">
+    [9] Sadler, J. C., & Wallace, S. (2021, June 10).
+    <em>
+      Microbial synthesis of vanillin from waste poly(ethylene terephthalate).
+    </em>
+    Green chemistry : an international journal and green chemistry resource :
+    GC. https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8256426/
+  </p>
+  <p class="paragraph fade-in">
+    [10] <em> What is pet plastic?. </em> American Beverage Association. (n.d.).
+    https://www.americanbeverage.org/education-resources/blog/post/what-is-pet/#:~:text=September%2019%2C%202022,and%20made%20to%20be%20remade.
+  </p>
+</div>
+
+{% endblock %}

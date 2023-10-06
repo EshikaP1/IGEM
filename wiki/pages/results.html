@@ -1,53 +1,198 @@
-{% extends "layout.html" %}
-  
-{% block title %}Results{% endblock %}
-{% block lead %}You can describe the results of your project and your future plans here.{% endblock %}
+{% extends "layout.html" %} {% block title %}Results{% endblock %} {% block lead
+%}{% endblock %} {% block page_content %}
 
-{% block page_content %}
+<style>
+  div.image-gallery {
+    display: block;
+    background-color: #ffffff;
+  }
+</style>
+<script src="{{ url_for('static', filename = 'fade-in.js') }}"></script>
 
-<div class="row mt-4">
-  <div class="col-lg-5">
-    <h2>What should this page contain?</h2>
-    <hr>
-    <ul>
-      <li>Clearly and objectively describe the results of your work.</li>
-      <li>Future plans for the project.</li>
-      <li>Considerations for replicating the experiments.</li>
-    </ul>
-  </div>
-  <div class="col-lg-7">
-    <h2>Describe what your results mean</h2>
-    <hr>
-    <ul>
-      <li>Interpretation of the results obtained during your project. Don't just show a plot/figure/graph/other, tell us what you think the data means. This is an important part of your project that the judges will look for.</li>
-      <li>Show data, but remember <b>all measurement and characterization data must also be on the Part's Main Page on the <a href="http://parts.igem.org/Main_Page">Registry</a>.</b> Otherwise these data will not be in consideration for any medals or part awards!</li>
-      <li>Consider including an analysis summary section to discuss what your results mean. Judges like to read what you think your data means, beyond all the data you have acquired during your project.</li>
-    </ul>
-  </div>
+<div style="background-color: #dbf9fc" class="box fade-in">
+  <h1 class="heading fade-in">Introduction</h1>
+  <hr class="fade-in" />
+  <p class="paragraph fade-in">
+    After running PCR on and purifying several different parts that we planned
+    on conducting research with, our team ran the first set of experiments to
+    compare the success of fluorescent signals of mEmerald and mScarlet with the
+    MucK clone. Samples in the presence of different concentrations of TPA and
+    different concentrations of IPTG were assayed.
+  </p>
+  <p class="paragraph fade-in">
+    IPTG is a molecular compound used as an inducer of gene expression from a
+    promoter linked to the operon of certain bacterial strains. In the absence
+    of IPTG, the repressor protein binds to the operator region, preventing
+    downstream transcription of the gene. Therefore, IPTG theoretically must
+    also be present, in addition to TPA, to allow transcription of the reporter
+    protein and achieve a fluorescent signal. We expected the fluorescence to
+    initially increase with greater concentrations of IPTG as more binds to the
+    repressor, then the increase to gradually taper off as the binding
+    approaches its saturation point (when all available repressor proteins are
+    bound to IPTG).
+  </p>
+  <p class="paragraph fade-in">
+    In addition, we expected the fluorescent signal to increase with greater
+    concentrations of TPA, as the presence of TPA should result in more cellular
+    processes that theoretically enhance the transcription of the reporter
+    protein, until the binding reaches a saturation point, and the increasing
+    fluorescence tapers off.
+  </p>
+  <p><strong>Fluorescent Signal of Reporter Proteins</strong></p>
+  <img
+    src="https://static.igem.wiki/teams/4651/wiki/results/results1.png"
+    class="center fade-in"
+    width="50%"
+  />
+  <p class="caption fade-in">
+    <em
+      >Figure 1. Fluorescent signal of MucK with mScarlet in varying TPA and
+      IPTG concentrations</em
+    >
+  </p>
+  <img
+    src="https://static.igem.wiki/teams/4651/wiki/results/results2.png"
+    class="center fade-in"
+    width="50%"
+  />
+  <p class="caption fade-in">
+    <em
+      >Figure 2. Fluorescent signal of MucK with mEmerald in varying TPA and
+      IPTG concentrations
+    </em>
+  </p>
+  <br />
+  <p class="paragraph fade-in">
+    The measurements of fluorescence demonstrated the noticeable background
+    signal in the readings as the signal reaches around 200 in mScarlet with
+    MucK and around 500 in mEmerald with MucK in the control group with a 0 µM
+    TPA concentration. This group was predicted to have no fluorescence signal.
+    Furthermore, theoretically there should be no increase in signal when the
+    IPTG concentration is 0 µM as IPTG (represented by blue on the graphs) is
+    required to facilitate TPA production. However, the signal increases from
+    199.106 to 341.493 with mScarlet and from 537.617 to 846.374 with mEmerald
+    as TPA concentration increases.
+  </p>
+  <p class="paragraph fade-in">
+    The largest fold increase produced in MucK with mScarlet was around 2.25,
+    whereas the largest fold increase for MucK with mEmerald was roughly 1.77.
+    While these were both observable changes, they were not significant enough
+    increases to achieve our goals in developing a sensitive biosensor for TPA.
+    However, the results were compared with past literature and the use of the
+    MucK importer was found to be more successful than previously-tested TpaK
+    importer.
+  </p>
+  <p class="paragraph fade-in">
+    Building on this experiment, our team decided to use the MucK clone with the
+    mEmerald reporter protein, but also explored other modifications to improve
+    the sensitivity of the plasmid. mEmerald was chosen over mScarlet as they
+    have a negligible difference in increased sensitivity, but mEmerald has a
+    higher signal production in general, indicating potential for a larger
+    ceiling value and ease to work with.
+  </p>
 </div>
 
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>Project Achievements</h2>
-    <hr>
-    <p>You can also include a list of bullet points (and links) of the successes and failures you have had over your summer. It is a quick reference page for the judges to see what you achieved during your summer.</p>
-    <ul>
-      <li>A list of linked bullet points of the successful results during your project</li>
-      <li>A list of linked bullet points of the unsuccessful results during your project. This is about being scientifically honest. If you worked on an area for a long time with no success, tell us so we know where you put your effort.</li>
-    </ul>
-  </div>
-  <div class="col-lg-4">
-    <h2>Inspirations</h2>
-    <hr>
-    <ul>
-      <li><a href="https://2019.igem.org/Team:Newcastle/Results">2019 Newcastle</a></li>
-      <li><a href="https://2019.igem.org/Team:Munich/Results">2019 Munich</a></li>
-      <li><a href="https://2019.igem.org/Team:Tec-Chihuahua/Results">2019 Tec Chihuahua</a></li>
-      <li><a href="https://2020.igem.org/Team:Aalto-Helsinki/Results">2020 Aalto Helsinki</a></li>
-      <li><a href="https://2020.igem.org/Team:GreatBay_SCIE/Results">2020 GreatBay SCIE</a></li>
-      <li><a href="https://2020.igem.org/Team:Queens_Canada/Results">2020 Queens Canada</a></li>
-    </ul>
-  </div>
+<div class="box fade-in">
+  <h1 class="heading fade-in">Fluorescent Signals of Promoter Modifications</h1>
+  <hr class="fade-in" />
+  <p class="paragraph fade-in">
+    Instead of focusing on the reporter protein and importers used, the next set
+    of experiments focused on modifications to the promoter to increase
+    sensitivity. Three independent modifications were made to the promoter and
+    compared: removing a potential second restriction binding site, replacing
+    the critical -10 and -35 sigma factors of the promoter with the
+    corresponding sigma factors on pTPA3 (a promoter used in previous papers),
+    and replacing the entire promoter with pTPA3.
+  </p>
+  <img
+    src="https://static.igem.wiki/teams/4651/wiki/results/results3.png"
+    class="center fade-in"
+    width="50%"
+  />
+  <p class="caption fade-in">
+    <em
+      >Figure 3. Fluorescent signal of each promoter modification with
+      increasing concentrations of TPA and steady IPTG levels
+    </em>
+  </p>
+  <br />
+  <p class="paragraph fade-in">
+    The first modification (in blue) of removing a potential second restriction
+    binding site did not impact the fluorescence signal with increasing levels
+    of TPA concentration. The third modification (in yellow) of replacing the
+    promoter with pTPA3 had an inverse relationship with TPA concentration.
+    Neither of these emit a higher fluorescence signal in the presence of more
+    TPA, and therefore would not make effective biosensors. However, the second
+    modification (in red) of exchanging has a positive increasing relationship
+    with the increasing concentration of TPA, making it the best candidate to
+    improve sensitivity of the plasmid.
+  </p>
+</div>
+
+<div style="background-color: #dbf9fc" class="box fade-in">
+  <h1 class="heading fade-in">Proof of Concept</h1>
+  <hr class="fade-in" />
+  <p class="paragraph fade-in">
+    Theoretically, the lack of IPTG should result in a low fluorescence signal,
+    even in the presence of TPA, as transcription of the reporter protein is
+    blocked. To test this, the signal of the promoter with the second
+    modification was compared between an IPTG and no IPTG environment in
+    increasing concentrations of TPA.
+  </p>
+  <img
+    src="https://static.igem.wiki/teams/4651/wiki/results/results4.png"
+    class="center fade-in"
+    width="50%"
+  />
+  <p class="caption fade-in">
+    <em
+      >Figure 4. Fluorescent signal of the sigma factor promoter modification in
+      the presence or not in the presence of IPTG with increasing concentrations
+      of TPA
+    </em>
+  </p>
+  <br />
+  <p class="paragraph fade-in">
+    For every concentration of TPA, there is a slightly higher fluorescence
+    signal in the presence of IPTG than not in the presence of IPTG, indicating
+    the ability of the biosensor to detect TPA to at least some extent. This
+    method ensures that the signal detected comes from the presence of TPA
+    rather than some other substance. Slight increases in the signal in the
+    no-IPTG environment can be explained by errors in the functionality of the
+    repressor protein or variability in expression.
+  </p>
+  <img
+    src="https://static.igem.wiki/teams/4651/wiki/results/results5.png"
+    class="center fade-in"
+    width="50%"
+  />
+  <p class="caption fade-in">
+    <em
+      >Figure 5. Fluorescent signal of the sigma factor promoter modification or
+      mEmerald reporter in the presence or not in the presence of IPTG with
+      increasing concentrations of TPA
+    </em>
+  </p>
+  <br />
+  <p class="paragraph fade-in">
+    The data from the first fluorescence assay, regarding the sensitivity of
+    MucK with the mEmerald reporter, and second assay, regarding the increased
+    sensitivity of the second modification with sigma factors, were compared
+    with and without TPA to determine the optimal results for maximum
+    sensitivity of the sensor. There is a noticeable presence of background
+    signal as the signal is around 500 even without IPTG. The increase in signal
+    in groups without IPTG (in blue and yellow) can be explained by errors in
+    the functionality of the repressor protein or expression of the genes.
+  </p>
+  <p class="paragraph fade-in">
+    There is an increase in sensitivity with both the mEmerald reporter and the
+    sigma factor promoter modifications previously described, although the
+    promoter modification seems to output a greater signal overall and has a
+    greater increase in higher concentrations of TPA. Through these results, we
+    can see the success and applicability of the parts developed in this
+    research to detect the presence of TPA and use it as a quantifying indicator
+    of PET degradation.
+  </p>
 </div>
 
 {% endblock %}

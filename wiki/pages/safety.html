@@ -3,6 +3,13 @@
 
 <script src="{{ url_for('static', filename = 'fade-in.js') }}"></script>
 
+<style>
+  div.image-gallery {
+    display: block;
+    background-color: #ffffff;
+  }
+</style>
+
 <div style="background-color: #dbf9fc" class="box fade-in">
   <h1 class="fade-in">Overview</h1>
   <hr class="fade-in" />
@@ -44,7 +51,17 @@
   </p>
 </div>
 
-<!--pics of badran lab here-->
+<div class="image-gallery fade-in">
+  <img
+    width="50%"
+    src="https://static.igem.wiki/teams/4651/wiki/badran-lab-photos/badranlab1.jpeg"
+  />
+  <img
+    width="50%"
+    src="https://static.igem.wiki/teams/4651/wiki/badran-lab-photos/badranlab2.jpeg"
+  />
+  <div class="clear"></div>
+</div>
 
 <div style="background-color: #dbf9fc" class="box fade-in">
   <h1 class="fade-in">Project Safety</h1>

@@ -1,149 +1,198 @@
-<!DOCTYPE html>
-<html>
+{% {% extends "layout.html" %}
 
-<head>
-    <title>Table Example</title>
-</head>
+{% block title %}Parts{% endblock %}
 
-<body>
-    <table border="1">
-        <tr>
-            <th>Name</th>
-            <th>Type</th>
-            <th>Description</th>
-            <th>Designers</th>
-            <th>Length (bp)</th>
-        </tr>
-        <tr>
+{% block lead %}{% endblock %}
+
+{% block page_content %}
+<script src="{{ url_for('static', filename = 'fade-in.js') }}"></script>
+
+<div style="background-color: #dbf9fc" class="box fade-in">
+  <h1 class="fade-in">Overview</h1>
+  <hr class="fade-in" />
+  <p class="fade-in">
+    Our team used a variety of different parts by creating new primers, using plasmids and parts from other research papers, and altering our current parts. Our team contributed a total of 31 different parts.
+
+  </p>
+</div>
+
+<div class="box fade-in">
+  <h1 class="fade-in">Parts Table</h1>
+  <hr class="fade-in" />
+  <div class="row mt-4">
+    <div class="col">
+      <table class="table table-hover fade-in">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Type</th>
+            <th scope="col">Description</th>
+            <th scope="col">Designers</th>
+            <th scope="col">Length</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
             <td>DL1030, or BBa_K4651001</td>
             <td>Primer</td>
             <td>Forward primer for MucK</td>
             <td>David Lanster and Grace Wang</td>
             <td>54</td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td>DL1031, or BBa_K4651002</td>
             <td>Primer</td>
             <td>Reverse primer for MucK</td>
             <td>David Lanster and Grace Wang</td>
             <td>42</td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td>DL1032, or BBa_K4651003</td>
             <td>Primer</td>
             <td>Forward primer for rest of MucK plasmid</td>
             <td>David Lanster and Grace Wang</td>
             <td>37</td>
-        </tr>
-        <tr>
-            <td>DL1033, or BBa_K4651004</td>
-            <td>Primer</td>
-            <td>Reverse primer for rest of MucK plasmid</td>
-            <td>David Lanster and Grace Wang</td>
-            <td>36</td>
-        </tr>
-        <tr>
-            <td>DL1034, or BBa_K4651005</td>
-            <td>Primer</td>
-            <td>Forward primer to alter -10 and -35 sigma factor on Tpar-Regulated Promoter to match pTPA3</td>
-            <td>David Lanster and Jason Gao</td>
-            <td>20</td>
-        </tr>
-        <tr>
-            <td>DL1035, or BBa_K4651006</td>
-            <td>Primer</td>
-            <td>Reverse primer to alter -10 and -35 sigma factor on Tpar-Regulated Promoter to match pTPA3</td>
-            <td>David Lanster and Jason Gao</td>
-            <td>60</td>
-        </tr>
-        <tr>
-            <td>DL1036, or BBa_K4651007</td>
-            <td>Primer</td>
-            <td>Forward primer to truncate Tpar-Regulated Promoter to remove native RBS</td>
-            <td>David Lanster and Jason Gao</td>
-            <td>38</td>
-        </tr>
-        <tr>
-            <td>DL1037, or BBa_K4651008</td>
-            <td>Primer</td>
-            <td>Reverse primer to truncate TpaR-Regulated Promoter to remove native RBS</td>
-            <td>David Lanster and Jason Gao</td>
-            <td>20</td>
-        </tr>
-        <tr>
-            <td>DL1038, or BBa_K4651009</td>
-            <td>Primer</td>
-            <td>Forward primer to linearize pIGEM1</td>
-            <td>David Lanster and Jason Gao</td>
-            <td>29</td>
-        </tr>
-        <tr>
-            <td>DL1039, or BBa_K4651010</td>
-            <td>Primer</td>
-            <td>Reverse primer for to linearize pIGEM1</td>
-            <td>David Lanster and Jason Gao</td>
-            <td>37</td>
-        </tr>
-        <tr>
-            <td>DL1040, or BBa_K4651011</td>
-            <td>Primer</td>
-            <td>Forward primer for pTPA3, amplifies with DL1041</td>
-            <td>David Lanster and Jason Gao</td>
-            <td>60</td>
-        </tr>
-        <tr>
-            <td>DL1041, or BBa_K4651012</td>
-            <td>Primer</td>
-            <td>Reverse primer for pTPA3, amplifies with DL1040</td>
-            <td>David Lanster and Jason Gao</td>
-            <td>60</td>
-        </tr>
-        <tr>
-            <td>mEmerald, or BBa_K4651013</td>
-            <td>Reporter</td>
-            <td>Creates green fluorescent signal</td>
-            <td>Ahmed Badran</td>
-            <td>717</td>
-        </tr>
-        <tr>
+          </tr>
+          <!-- Add more rows for the remaining data -->
+          <tr>
             <td>mScarlet-1, or BBa_K4651014</td>
             <td>Reporter</td>
             <td>Creates scarlet fluorescent signal</td>
             <td>Ahmed Badran</td>
             <td>696</td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td>bla (AmpR), or BBa_K4651015</td>
             <td>Antibiotic Resistance Marker</td>
             <td>Antibiotic resistance marker for carbenicillin</td>
             <td>Badran lab collection</td>
             <td>861</td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td>bla promoter, or BBa_K4651016</td>
             <td>Promoter</td>
             <td>Drives expression for bla (AmpR) antibiotic resistance marker</td>
             <td>Badran lab collection</td>
             <td>195</td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td>RepA, or BBa_K4651017</td>
             <td>Origin of replication</td>
             <td>Works together with pSC101 to make copies of plasmid</td>
             <td>Badran lab collection</td>
             <td>951</td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td>pSC101, or BBa_K4651018</td>
             <td>Origin of replication</td>
             <td>Works together with RepA to make copies of plasmid</td>
             <td>Badran lab collection</td>
             <td>746</td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td>TpaR-Regulated Promoter, or BBa_K4651019</td>
             <td>Promoter</td>
             <td>Drives expression of mEmerald or mScarlet, and TpaR</td>
             <td>David Lanster and Ahmed Badran taken from reference 2</td>
             <td>164</td>
-        </
+          </tr>
+          <tr>
+            <td>RHA1_RS41675, or BBa_K4651020</td>
+            <td>Transcription Factor</td>
+            <td>Starts transcription for both plasmids</td>
+            <td>David Lanster and Ahmed Badran taken from reference 2</td>
+            <td>735</td>
+          </tr>
+         
+          
+        
+                    <tr>
+                      <td>rrnB1, or BBa_K4651021</td>
+                      <td>Terminator</td>
+                      <td>Ends transcription</td>
+                      <td>Badran lab collection</td>
+                      <td>432</td>
+                    </tr>
+                    <tr>
+                      <td>TpaK, or BBa_K4651022</td>
+                      <td>Importer</td>
+                      <td>Imports TPA into plasmid</td>
+                      <td>Ahmed Badran taken from reference 2</td>
+                      <td>1380</td>
+                    </tr>
+                    <tr>
+                      <td>MucK, or BBa_K4651023</td>
+                      <td>Importer</td>
+                      <td>Imports TPA into plasmid</td>
+                      <td>Ahmed Badran, taken from reference 1</td>
+                      <td>1242</td>
+                    </tr>
+                    <tr>
+                      <td>aadA, or BBa_K4651024</td>
+                      <td>Antibiotic Resistance Marker</td>
+                      <td>Antibiotic resistance marker for spectinomycin</td>
+                      <td>Badran lab collection</td>
+                      <td>792</td>
+                    </tr>
+                    <tr>
+                      <td>pLacZ, or BBa_K4651025</td>
+                      <td>Promoter</td>
+                      <td>Drives expression of MucK and TpaK</td>
+                      <td>Badran lab collection</td>
+                      <td>139</td>
+                    </tr>
+                    <tr>
+                      <td>Rop, or BBa_K4651026</td>
+                      <td>Origin of replication</td>
+                      <td>Works with ColE1 to make copies of plasmid</td>
+                      <td>Badran lab collection</td>
+                      <td>192</td>
+                    </tr>
+                    <tr>
+                      <td>ColE1, or BBa_K4651027</td>
+                      <td>Origin of replication</td>
+                      <td>Works with Rop to make copies of plasmid</td>
+                      <td>Badran lab collection</td>
+                      <td>589</td>
+                    </tr>
+                    <tr>
+                      <td>lacI, or BBa_K4651028</td>
+                      <td>Protein</td>
+                      <td>Protein that controls MucK</td>
+                      <td>Badran lab collection</td>
+                      <td>1083</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>pTPA3, or BBa_K4651029</td>
+                        <td>Promoter</td>
+                        <td>Promoter taken from reference 1</td>
+                        <td>David Lanster, taken from reference 1</td>
+                        <td>111</td>
+                      </tr>
+                      <tr>
+                        <td>TpaR-Regulated Promoter1.1, or BBa_K4651030</td>
+                        <td>Promoter</td>
+                        <td>Modified TpaR-Regulated Promoter to be truncated to remove native RBS</td>
+                        <td>David Lanster and Jason Gao</td>
+                        <td>153</td>
+                      </tr>
+                      <tr>
+                        <td>TpaR-Regulated Promoter1.2, or BBa_K4651031</td>
+                        <td>Promoter</td>
+                        <td>Modified TpaR-Regulated Promoter to have -10 and -35 sigma factor regions changed to match pTPA3</td>
+                        <td>David Lanster and Jason Gao</td>
+                        <td>163</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            
+            {% endblock %}
+
+            Citations
+            Pardo I, Jha RK, Bermel RE, Bratti F, Gaddis M, McIntyre E, Michener W, Neidle EL, Dale T, Beckham GT, Johnson CW. Gene amplification, laboratory evolution, and biosensor screening reveal MucK as a terephthalic acid transporter in Acinetobacter baylyi ADP1. Metab Eng. 2020 Nov;62:260-274. doi: 10.1016/j.ymben.2020.09.009. Epub 2020 Oct 1. PMID: 32979486.
+            Hara H, Eltis LD, Davies JE, Mohn WW. Transcriptomic analysis reveals a bifurcated terephthalate degradation pathway in Rhodococcus sp. strain RHA1. J Bacteriol. 2007 Mar;189(5):1641-7. doi: 10.1128/JB.01322-06. Epub 2006 Dec 1. PMID: 17142403; PMCID: PMC1855752.
+            

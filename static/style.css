@@ -1,23 +1,23 @@
 /* Fonts */
 @font-face {
-    font-family: "Londrina Solid";
-    src: url(https://static.igem.wiki/teams/4386/wiki/fonts/londrinasolid-regular.ttf);
-  }
-  
-  @font-face {
-    font-family: "Londrina";
-    src: url(https://static.igem.wiki/teams/4386/wiki/fonts/londrinasolid-light.ttf);
-  }
-  
-  @font-face {
-    font-family: "Inter";
-    src: url(https://static.igem.wiki/teams/4386/wiki/fonts/inter-regular.ttf);
-  }
-  
-  @font-face {
-    font-family: "Inter Bold";
-    src: url(https://static.igem.wiki/teams/4386/wiki/fonts/inter-semibold.ttf);
-  }
+  font-family: "Open Sans Extra Bold";
+  src: url(https://static.igem.wiki/teams/4651/wiki/fonts/opensans-condensed-extrabold.ttf);
+}
+
+@font-face {
+  font-family: "Open Sans Semi Bold";
+  src: url(https://static.igem.wiki/teams/4651/wiki/fonts/opensans-condensed-semibold.ttf);
+}
+
+@font-face {
+  font-family: "Source Sans";
+  src: url(https://static.igem.wiki/teams/4651/wiki/fonts/sourcesans3-regular.ttf);
+}
+
+@font-face {
+  font-family: "Source Sans Bold";
+  src: url(https://static.igem.wiki/teams/4651/wiki/fonts/sourcesans3-semibold.ttf);
+}
   /* end font */
   
   /* Gradient BG */
@@ -73,7 +73,7 @@
   
   .bg-hero {
     margin-bottom: 3rem;
-    font-family: "Londrina Solid";
+    font-family: "Open Sans Extra Bold";
     color: #3c8990;
     text-shadow: 6px 6px #c5dcd8;
     text-align: center;
@@ -151,7 +151,7 @@
     font-size: 24px;
     text-align: center;
     justify-content: center;
-    font-family: "Londrina";
+    font-family: "Open Sans Semi Bold";
     padding: 0;
     align-items: center;
   }
@@ -162,7 +162,7 @@
   }
   
   .copyright {
-    font-family: "Inter";
+    font-family: "Source Sans";
     text-align: center;
     margin: 0;
   }
@@ -172,7 +172,7 @@
   /* nav bar */
   
   .nav-text {
-    font-family: "Inter";
+    font-family: "Source Sans";
     color: white;
   }
   
@@ -198,14 +198,14 @@
   .box h1 {
     text-align: center;
     color: inherit;
-    font-family: "Londrina";
+    font-family: "Open Sans Semi Bold";
   }
   .box p {
     text-align: justify;
     color: inherit;
     font-size: 18px;
     line-height: 150%;
-    font-family: "Inter";
+    font-family: "Source Sans";
   }
   
   .center {
@@ -217,7 +217,7 @@
   td {
     font-size: 1.2 rem;
     line-height: 200%;
-    font-family: "Inter";
+    font-family: "Source Sans";
   }
   
   .button {
@@ -233,7 +233,7 @@
     margin: 4px 4px;
     cursor: pointer;
     background-color: #b0e8c0;
-    font-family: "Londrina";
+    font-family: "Open Sans Semi Bold";
     border-radius: 25px;
   }
   
@@ -243,33 +243,33 @@
   }
   
   .paragraph {
-    font-family: "Inter";
+    font-family: "Source Sans";
     font-size: 1.2 rem;
   }
   
   .heading {
-    font-family: "Londrina";
+    font-family: "Open Sans Semi Bold";
     font-size: 1.5 rem;
   }
   
   p {
-    font-family: "Inter";
+    font-family: "Source Sans";
     font-size: 1.2 rem;
   }
   
   b {
-    font-family: "Inter";
+    font-family: "Source Sans";
     font-size: 1.3 rem;
     font-weight: bold;
   }
   
   h1 {
-    font-family: "Londrina";
+    font-family: "Open Sans Semi Bold";
     font-size: 1.5 rem;
   }
   
   h2 {
-    font-family: "Londrina";
+    font-family: "Open Sans Semi Bold";
     font-size: 1.2 rem;
   }
   

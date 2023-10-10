@@ -1,0 +1,132 @@
+{% extends "layout.html" %} {% block title %}Proof of Concept{% endblock %} {%
+block lead %}{% endblock %} {% block page_content %}
+
+<style>
+  div.image-gallery {
+    display: block;
+    background-color: #ffffff;
+  }
+</style>
+<script src="{{ url_for('static', filename = 'fade-in.js') }}"></script>
+
+<div style="background-color: #dbf9fc" class="box fade-in">
+  <h1 class="heading fade-in">Goals</h1>
+  <hr class="fade-in" />
+  <p class="paragraph fade-in">
+    To design and create a plasmid that, in the presence of TPA, will create a
+    detectable fluorescent signal. Since TPA is a monomer product of the
+    degradation of PET, optimizing the dynamic range of this signal will allow
+    us to accurately measure PET degradation.
+  </p>
+</div>
+
+<div class="box fade-in">
+  <h1 class="heading fade-in">Plasmid Design</h1>
+  <hr class="fade-in" />
+  <p class="paragraph fade-in">
+    Our team tested a variety of parts to design, build, and test four different
+    plasmids. We designed our constructs based on previous data from the Badran
+    lab that showed only a modest increase in fluorescent signal when TPA was
+    titrated into cell culture. Each plasmid and assay are described below.
+  </p>
+  <p class="paragraph fade-in">
+    Initially, our plan was to experiment with MucK, found in reference 1, as a
+    new importer to test if the importer previously used, tpaK, was limiting or
+    non-functional. We also decided to test the effects different fluorescent
+    reporters might have, and compared mScarlet to mEmerald to see which would
+    produce a better signal. To do this, our team conducted an assay, testing
+    combinations of mucK importer plasmid with reporter plasmids encoding either
+    mScarlet or mEmerald.
+  </p>
+  <img
+    src="https://static.igem.wiki/teams/4651/wiki/results/results3.png"
+    class="center fade-in"
+    width="50%"
+  />
+  <br />
+  <p class="paragraph fade-in">
+    Above is plasmid pIGEM1. This is the plasmid map of the first plasmid our
+    team made. It has the antibiotic resistance marker bla (AmpR) for
+    carbenicillin to allow selection for the plasmids that have been correctly
+    constructed, the mEmerald fluorescent protein, TpaR-Regulated Promoter
+    (found in reference 2) as the promoter driving expression of TpaR and
+    mEmerald, the origin of replication RepA and pSC101 to allow for plasmid
+    propogation, transcription factor of RHA1 or tpaR (found in reference 2),
+    and rrnB1 terminator. The part our team was interested in for this plasmid
+    was mEmerald.
+  </p>
+  <img
+    src="https://static.igem.wiki/teams/4651/wiki/results/results3.png"
+    class="center fade-in"
+    width="50%"
+  />
+  <br />
+  <p class="paragraph fade-in">
+    Above is plasmid pAB132e18 and is very similar to pIGEM1. It has the same
+    antibiotic resistance marker bla (AmpR) for carbenicillin, promoter of
+    TpaR-Regulated Promoter, origin of replication RepA and pSC101,
+    transcription factor RHA1 or tpaR, and terminator of rrnB1. The key
+    difference is instead of mEmerald, the plasmid has mScarlet, which is the
+    part our team is interested in.
+  </p>
+  <img
+    src="https://static.igem.wiki/teams/4651/wiki/results/results3.png"
+    class="center fade-in"
+    width="50%"
+  />
+  <br />
+  <p class="paragraph fade-in">
+    Above is plasmid pIGEM2. This plasmid has MucK as its importer of TPA, ColE1
+    and Rop as its origin of replication, protein lacI and promoter pLacZ to
+    control MucK, and antibiotic resistance marker aadA to confer spectinomycin
+    resistance. The part of interest here is importer MucK. Below are graphs of
+    the results from the first assay. These graphs and their respective data
+    tables can also be found in the lab journal.
+  </p>
+  <img
+    src="https://static.igem.wiki/teams/4651/wiki/results/results4.png"
+    class="center fade-in"
+    width="50%"
+  />
+  <br />
+  <p class="caption fade-in">
+    <em> Graph 1: Average mScarlet Signal/OD for all 4 clones </em>
+  </p>
+  <img
+    src="https://static.igem.wiki/teams/4651/wiki/results/results4.png"
+    class="center fade-in"
+    width="50%"
+  />
+  <br />
+  <p class="caption fade-in">
+    <em> Graph 2: Average mEmerald Signal/OD for all 4 clones </em>
+  </p>
+  <p class="paragraph fade-in">
+    From these graphs, our team noted that the largest fold increase was roughly
+    2.25 for mScarlet with MucK and roughly 1.77 for mEmerald with MucK. While
+    these increases are noticeable, it is not large enough for a robust
+    biosensor. Furthermore, the background signal and how it increases in signal
+    despite the absence of IPTG, a small molecule that binds to pLacZ to allow
+    expression of MucK and thus TPA detection, does create some concern.
+    Therefore, our team looked at other potential parts that could be inhibiting
+    TPA detection. At this time, our team noticed that a promoter called pTPA3,
+    also found in reference 1, worked decently well. Our team compared pTPA3 to
+    TpaR-Regulated Promoter and found three modifications that could heighten
+    our fold-increase: remove a native RBS site found in the TpaR-Regulated
+    Promoter, alter the -35 and -10 sigma factor sections of the TpaR-Regulated
+    Promoter sequence to match that of pTPA3, and entirely replace
+    TpaR-Regulated Promoter with pTPA3. Our team then decided to conduct a
+    second assay to compare these three modifications. Since the importer and
+    reporter had to be kept constant in this assay and mEmerald with MucK and
+    mScarlet with MucK performed similarly, our team just chose to use mEmerald
+    with MucK. Since mEmerald came from pIGEM1, the first modification (removing
+    the native RBS site) was called iGEM1a, the second modification (altering
+    -35 and -10 sigma factors) was called iGEM1b, and the third modification
+    (replace with pTPA3) was called iGEM1c. All the sequences and sequence
+    changes can be seen below. In the parts page, iGEM1a was renamed
+    TpaR-Regulated Promoter1.1, iGEM1b was renamed TpaR-Regulated Promoter1.2,
+    and iGEM1c is pTPA3.
+  </p>
+</div>
+
+{% endblock %}

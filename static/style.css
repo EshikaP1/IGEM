@@ -74,15 +74,15 @@
   .bg-hero {
     margin-bottom: 3rem;
     font-family: "Open Sans Extra Bold";
-    color: #83C48C;
-    text-shadow: 6px 6px #aaffb5;
+    color: #34623F;
+    text-shadow: 6px 6px #90aa96;
     text-align: center;
     width: 100%;
     height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("https://static.igem.wiki/teams/4651/wiki/igem-copy.png)")
+    background-image: url("https://static.igem.wiki/teams/4651/wiki/igem-copy.png")
   }
   
   .bg-hero h1 {

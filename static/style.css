@@ -68,7 +68,7 @@
   }
   
   .bg-dark {
-    background-color: #34623F !important;
+    background-color: #213d27 !important;
   }
   
   .bg-hero {
@@ -127,7 +127,7 @@
   
   .footer-format {
     margin-top: 56px;
-    background-color: #34623F;
+    background-color: #213d27;
     color: white;
   }
   
@@ -147,7 +147,7 @@
   .footer-copyright {
     color: white;
     font-weight: 700;
-    background-color: #34623F;
+    background-color: #213d27;
   }
   
   .copyright {

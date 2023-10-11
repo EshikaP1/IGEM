@@ -194,13 +194,11 @@
     position: relative;
     align-items: center;
     justify-content: center;
-    background-color: #83C48C;
   }
   .box h1 {
     text-align: center;
     color: inherit;
     font-family: "Open Sans Semi Bold";
-    background-color: #83C48C;
   }
   .box p {
     text-align: justify;
@@ -208,7 +206,6 @@
     font-size: 18px;
     line-height: 150%;
     font-family: "Source Sans";
-    background-color: #83C48C;
   }
   
   .center {

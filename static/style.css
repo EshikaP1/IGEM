@@ -68,7 +68,7 @@
   }
   
   .bg-dark {
-    background-color: #18373a !important;
+    background-color: #34623F !important;
   }
   
   .bg-hero {
@@ -127,7 +127,7 @@
   
   .footer-format {
     margin-top: 56px;
-    background-color: #18373a;
+    background-color: #34623F;
     color: white;
   }
   
@@ -147,7 +147,7 @@
   .footer-copyright {
     color: white;
     font-weight: 700;
-    background-color: #18373a;
+    background-color: #34623F;
   }
   
   .copyright {
@@ -221,13 +221,13 @@
     font-size: 35px;
     margin: 4px 4px;
     cursor: pointer;
-    background-color: #b0e8c0;
+    background-color: #6B99D7;
     font-family: "Open Sans Semi Bold";
     border-radius: 25px;
   }
   
   .button:hover {
-    background-color: #72c088;
+    background-color: #4b6b95;
     color: white;
   }
   

@@ -317,6 +317,6 @@
 
 /* Change the color of the scrollbar track (the part under the thumb) to white */
 ::-webkit-scrollbar-track {
-  background: #6B99D7; /* White color */
+  background: #6B99D7; 
 }
 

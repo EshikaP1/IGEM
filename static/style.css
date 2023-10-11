@@ -320,3 +320,11 @@
   background: #6B99D7; 
 }
 
+div.image-gallery {
+  display: flex;
+  background-color: #C6EDC3;
+}
+
+div.image-gallery img {
+  width: 50%;
+}

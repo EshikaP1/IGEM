@@ -316,3 +316,51 @@
   
   /* end image gallery */
   
+
+  body {
+  background-color: #6B99D7;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #FFF1DD;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1, h2, h3 {
+  color: #2A4260;
+}
+
+p {
+  color: #34623F;
+}
+
+a {
+  color: #83C48C;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  background-color: #83C48C;
+  color: #2A4260;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #34623F;
+  color: #FFF1DD;
+}
+
+/* You can add more styles for your specific HTML elements as needed. */
+

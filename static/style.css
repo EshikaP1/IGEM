@@ -304,18 +304,19 @@
   }
   
   /* end image gallery */
-  
+ 
 /* Change the scrollbar width */
 ::-webkit-scrollbar {
   width: 12px;
 }
 
-/* Change the color of the scrollbar thumb */
+/* Change the color of the entire scrollbar thumb to blue */
 ::-webkit-scrollbar-thumb {
-  background: #0074D9; /* Blue color */
+  background: #6B99D7; /* Blue color */
 }
 
-/* Change the color of the scrollbar track */
+/* Change the color of the scrollbar track (the part under the thumb) to white */
 ::-webkit-scrollbar-track {
-  background: #0074D9; /* Blue color */
+  background: #6B99D7; /* White color */
 }
+

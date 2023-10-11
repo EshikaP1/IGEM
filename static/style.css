@@ -305,3 +305,17 @@
   
   /* end image gallery */
   
+/* Change the scrollbar width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Change the color of the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background: #0074D9; /* Blue color */
+}
+
+/* Change the color of the scrollbar track */
+::-webkit-scrollbar-track {
+  background: #0074D9; /* Blue color */
+}

@@ -305,21 +305,6 @@
   
   /* end image gallery */
  
-/* Change the scrollbar width */
-::-webkit-scrollbar {
-  width: 12px;
-}
-
-/* Change the color of the entire scrollbar thumb to blue */
-::-webkit-scrollbar-thumb {
-  background: #6B99D7; /* Blue color */
-}
-
-/* Change the color of the scrollbar track (the part under the thumb) to white */
-::-webkit-scrollbar-track {
-  background: #6B99D7; 
-}
-
 div.image-gallery {
   display: flex;
   background-color: #C6EDC3;

@@ -348,4 +348,8 @@ body {
 
 /* Additional styles for headings, paragraphs, links, buttons, etc. can be added as needed. */
 
+.my-element {
+  background-color: #83C48C;
+  /* Other styles for the element */
+}
 

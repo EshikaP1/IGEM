@@ -1,34 +1,470 @@
-{% extends "layout.html" %}
+{% extends "layout.html" %} {% block title %}Team{% endblock %} {% block lead %}
+{% endblock %} {% block page_content %}
+<script src="{{ url_for('static', filename = 'fade-in.js') }}"></script>
 
-{% block title %}Team{% endblock %}
-{% block lead %}On this page you can introduce your team members, instructors, and advisors.{% endblock %}
+<style>
+  * {
+    box-sizing: border-box;
+  }
+  .imageColumn {
+    position: relative;
+    float: left;
+    width: 25%;
+  }
 
-{% block page_content %}
+  .image_img {
+    display: block;
+    width: 95%;
+    height: auto;
+  }
 
-<div class="row">
-  <div class="col-8">
-    <h2>What should this page contain?</h2>
-    <hr>
-    <ul>
-      <li>Include pictures of your teammates, don't forget instructors and advisors!</li>
-      <li>You can add a small biography or a few words from each team member, to tell us what you like, and what motivated you to participate in iGEM.</li>
-      <li>Take team pictures! Show us your school, your lab and little bit of your city.</li>
-      <li>Remember that image galleries can help you showcase many pictures while saving space.</li>
-    </ul>
-    <div class="bd-callout bd-callout-info"><strong>Important:</strong> Your wiki pages will be archived at the end of the iGEM season and this content will remain online. Please keep this in mind as you post photos and personal information on this page.</div>
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 95%;
+    opacity: 0;
+    transition: opacity 1s;
+    background-color: #b0e8c0;
+    display: flex;
+    flex-direction: column;
+    flex-direction: column;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .overlay:hover {
+    opacity: 0.75;
+  }
+
+  .overlay--blur {
+    backdrop-filter: blur(5px);
+  }
+
+  .title {
+    font-size: 2em;
+    font-weight: bold;
+    font-family: "Londrina";
+    display: block;
+    align-items: center;
+  }
+
+  .text {
+    color: black;
+    font-size: 1em;
+    font-family: "Inter";
+    line-height: 1.2;
+    position: relative;
+    width: 95%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    left: 50%;
+    text-align: center;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  #header {
+    width: fit-content;
+    margin: 0 auto;
+    font-family: "Londrina";
+    font-weight: bold;
+  }
+
+  .alignRow {
+    overflow: auto;
+  }
+</style>
+
+<body>
+  <h1 id="header" class="fade-in">Meet Del Norte iGEM!</h1>
+  <br />
+  <img
+    style="width: 100%"
+    src="https://static.igem.wiki/teams/4651/wiki/team/full-team.jpeg"
+    class="fade-in"
+  />
+  <br />
+  <div>
+    <br />
+    <div class="alignRow">
+      <div class="imageColumn">
+        <div class="image_img">
+          <img
+            src="https://static.igem.wiki/teams/4651/wiki/team/shefali.jpg"
+            width="100%"
+            alt="Avatar"
+            class="image fade-in"
+          />
+          <div class="overlay">
+            <div class="title">Shefali Chaubey</div>
+            <br />
+            <p class="text">
+              Hi! My name’s Shefali, and I’m President of DNHS iGEM! This is my
+              third year competing, and I absolutely love the educational and
+              positive environment iGEM fosters, empowering curiosity in the
+              synthetic biology field. My specialization is in SciComm/HP, but I
+              help in all departments! I love working with such talented people,
+              and am so excited to see our hard work pay off. In my free time
+              I’m often reading or running, and listening to lots of music!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="imageColumn">
+        <div class="image_img">
+          <img
+            src="https://static.igem.wiki/teams/4651/wiki/team/andrea.jpg"
+            width="100%"
+            alt="Avatar"
+            class="image fade-in"
+          />
+          <div class="overlay">
+            <div class="title">Andrea Wang</div>
+            <br />
+            <p class="text">
+              Hi! I’m Andrea and I’m a senior. This is my 2nd year in iGEM and
+              I’m DNHS iGEM’s Head of HP & SciComm, so I’m responsible for
+              organizing surveys, camps, and other interactions with our
+              community! I love art and recently learned a little bit of
+              animating for our iGEM promo vid :O Books are my form of
+              escapism—I’m currently reading The Glass Menagerie—and I’m also
+              really craving lychee cups.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="imageColumn">
+        <div class="image_img">
+          <img
+            src="https://static.igem.wiki/teams/4651/wiki/team/grace.jpg"
+            width="100%"
+            alt="Avatar"
+            class="image fade-in"
+          />
+          <div class="overlay">
+            <div class="title">Grace Wang</div>
+            <br />
+            <p class="text">
+              Hi, I'm Grace! I'm currently a high school senior. I've had the
+              privilege of participating in iGEM for 2 years and I'm currently
+              Head of Software. Within iGEM, I've been fortunate to contribute
+              to various aspects of our projects throughout the years, including
+              modeling, wiki development, and wet lab research. Beyond my
+              research endeavors, I'm an avid reader and love seeking new
+              experiences.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="imageColumn">
+        <div class="image_img">
+          <img
+            src="https://static.igem.wiki/teams/4651/wiki/team/zinia.jpg"
+            width="100%"
+            alt="Avatar"
+            class="image fade-in"
+          />
+          <div class="overlay">
+            <div class="title">Zinia Khattar</div>
+            <br />
+            <p class="text">
+              Hello! I’m Zinia and am Head of Research and Lab for our iGEM
+              team. I am in 11th grade and this is my second year competing. I
+              am responsible for all the wet lab experiments like developing our
+              biosensor, plasmids, and other parts. I also manage modeling and
+              expert interviews. When I’m not doing research, I love playing
+              classical music on my piano, traveling, and swimming.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="alignRow">
+      <div class="imageColumn">
+        <div class="image_img">
+          <img
+            src="https://static.igem.wiki/teams/4651/wiki/team/dishti.jpg"
+            width="100%"
+            alt="Avatar"
+            class="image fade-in"
+          />
+          <div class="overlay">
+            <div class="title">Dishti Wadhwani</div>
+            <br />
+            <p class="text">
+              Hi :) My name is Dishti and I’m currently a junior. This is my 2nd
+              year in iGEM and I’m DNHS iGEM’s Head of Logistics, so I manage
+              all the deadlines and fun stuff. I am part of our software
+              department, mainly working on writing and coding the wiki pages. I
+              like to listen to music, read books and sleep when I have free
+              time!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="imageColumn">
+        <div class="image_img">
+          <img
+            src="https://static.igem.wiki/teams/4651/wiki/team/faiza.jpg"
+            width="100%"
+            alt="Avatar"
+            class="image fade-in"
+          />
+          <div class="overlay">
+            <div class="title">Faiza Alam</div>
+            <br />
+            <p class="text">
+              Hi! My name is Faiza and I am a junior at DNHS. This is my first
+              year being a part of iGEM, and I’ve had such a blast and honor
+              working with such amazing teammates as a part of the HP + SciComm
+              department. Other than iGEM, I love playing the flute and reading
+              comic books!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="imageColumn">
+        <div class="image_img">
+          <img
+            src="https://static.igem.wiki/teams/4651/wiki/team/nupur.jpg"
+            width="100%"
+            alt="Avatar"
+            class="image fade-in"
+          />
+          <div class="overlay">
+            <div class="title">Nupur Bhalla</div>
+            <br />
+            <p class="text">
+              Hi! I'm Nupur and I am a sophomore at Del Norte High school. This
+              is my first year competing at IGEM and I am with the software
+              team. I love working with my team to learn more about science and
+              help educate others in the community about important issues.
+              Besides from IGEM, I love to play tennis and listen to music.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="imageColumn">
+        <div class="image_img">
+          <img
+            src="https://static.igem.wiki/teams/4651/wiki/team/prakruti.jpg"
+            width="100%"
+            alt="Avatar"
+            class="image fade-in"
+          />
+          <div class="overlay">
+            <div class="title">Prakruti Bhatt</div>
+            <br />
+            <p class="text">
+              Hi!! I’m Prakruti, and I’m currently a sophomore. This is my first
+              year at iGEM and I’m part of our beloved software department where
+              I can use my scope of imagination to create a website with my
+              team. Aside from trying to debug infinite lines of code, I spend
+              my time embroidering, writing and reading novels.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br />
+
+    <div class="alignRow">
+      <div class="imageColumn">
+        <div class="image_img">
+          <img
+            src="https://static.igem.wiki/teams/4651/wiki/team/shreena.jpg"
+            width="100%"
+            alt="Avatar"
+            class="image fade-in"
+          />
+          <div class="overlay">
+            <div class="title">Shreena Dayal</div>
+            <br />
+            <p class="text">
+              Hi! My name is Shreena and I’m currently a junior. This is my 2nd
+              year competing in iGEM and I’m a member of the HP + SciComm team.
+              I worked with my team to survey our community on their knowledge
+              of plastic pollution and develop educational tools like our
+              guidebook. In my free time, I like to travel, listen to music,
+              dance, and crochet.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="imageColumn">
+        <div class="image_img">
+          <img
+            src="https://static.igem.wiki/teams/4651/wiki/team/saanvi.jpg"
+            width="100%"
+            alt="Avatar"
+            class="image fade-in"
+          />
+          <div class="overlay">
+            <div class="title">Saanvi Dogra</div>
+            <br />
+            <p class="text">
+              Hi! My name is Saanvi and I’m a sophomore. This is my first year
+              in iGEM and I’m part of DNHS iGEM’s Research department, so I help
+              with developing parts through wet lab experiments, digital
+              modeling, and compiling results for the project. I love reading
+              books, listening to music, and playing tennis whenever I can!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="imageColumn">
+        <div class="image_img">
+          <img
+            src="https://static.igem.wiki/teams/4386/wiki/team/vibha.jpg"
+            width="100%"
+            alt="Avatar"
+            class="image fade-in"
+          />
+          <div class="overlay">
+            <div class="title">Vibha Ganji</div>
+            <br />
+            <p class="text">
+              Hello, I’m Vibha and I’m currently a sophomore. This is my first
+              year participating in iGEM and I’m a part of the software
+              department.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="imageColumn">
+        <div class="image_img">
+          <img
+            src="https://static.igem.wiki/teams/4386/wiki/team/vidha.jpg"
+            width="100%"
+            alt="Avatar"
+            class="image fade-in"
+          />
+          <div class="overlay">
+            <div class="title">Vidha Ganji</div>
+            <br />
+            <p class="text">
+              Hi, my name’s Vidha, and I’m currently a sophomore. This is my
+              first year in iGEM, and I’m a member of iGEM’s research
+              department. I contribute to modeling, analyzing project results,
+              and overviewing research topics, all which have been rewarding
+              experiences for me. Outside of iGEM, I love to read, play the
+              violin, and write stories!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <div class="alignRow">
+      <div class="imageColumn">
+        <div class="image_img">
+          <img
+            src="https://static.igem.wiki/teams/4651/wiki/team/jason.png"
+            width="100%"
+            alt="Avatar"
+            class="image fade-in"
+          />
+          <div class="overlay">
+            <div class="title">Jason Gao</div>
+            <br />
+            <p class="text">
+              Hi there! I’m Jason and I am currently a junior. This is my first
+              year participating in iGEM and I am part of the research
+              department! My main jobs this year was to do a lot of wet lab
+              research, keep the lab journal updated, communicate with our
+              mentors, and ensure everyone is on the same page on the progress
+              of our research. Aside from iGEM and biology, I also especially
+              love chemistry and history. Some of my hobbies include reading
+              books and manga, wasting too much of my soul on gacha games, and
+              playing trumpet in a few ensembles!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="imageColumn">
+        <div class="image_img">
+          <img
+            src="https://static.igem.wiki/teams/4651/wiki/team/tanvi.jpg"
+            width="100%"
+            alt="Avatar"
+            class="image fade-in"
+          />
+          <div class="overlay">
+            <div class="title">Tanvi Movva</div>
+            <br />
+            <p class="text">
+              Hi, I'm Tanvi, a sophomore in my first year with iGEM. I'm part of
+              the fantastic HP/SciComm team, where I engage with our community
+              about our project and also give back by organizing summer camps,
+              conducting surveys, and interviewing community members. In my free
+              time, I enjoy running, dancing, listening to music, and hanging
+              out with friends.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="imageColumn">
+        <div class="image_img">
+          <img
+            src="https://static.igem.wiki/teams/4386/wiki/team/shree.jpg"
+            width="100%"
+            alt="Avatar"
+            class="image fade-in"
+          />
+          <div class="overlay">
+            <div class="title">Shree Patel</div>
+            <br />
+            <p class="text">
+              Hi! I’m Shree and I’m currently a junior at Del Norte High School!
+              This is my first year competing, and I’m currently a part of the
+              research department. I love how I get to combine my love for
+              research with outreach and community work. In my free time, I like
+              to read and bake!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="imageColumn">
+        <div class="image_img">
+          <img
+            src="https://static.igem.wiki/teams/4386/wiki/team/lilian.jpeg"
+            width="100%"
+            alt="Avatar"
+            class="image fade-in"
+          />
+          <div class="overlay">
+            <div class="title">Lilian Zeng</div>
+            <br />
+            <p class="text">
+              Hi! My name’s Lilian, and I’m a sophomore. This is my first year
+              in iGEM and I’m part of our HP & SciComm team, so I helped with
+              animating the promo vid and helping out with camps! In my free
+              time, I enjoy drawing, ice-skating and playing with my cat.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="col-4">
-    <h2>Inspirations</h2>
-    <hr>
-    <ul>
-      <li><a href="https://2019.igem.org/Team:CU/Team">2019 CU</a></li>
-      <li><a href="https://2019.igem.org/Team:UANL/Team">2019 UANL</a></li>
-      <li><a href="https://2019.igem.org/Team:William_and_Mary/Team">2019 William and Mary</a></li>
-      <li><a href="https://2020.igem.org/Team:BOKU-Vienna/Team">2020 BOKU Vienna </a></li>
-      <li><a href="https://2020.igem.org/Team:CAU_China/Team_Member">2020 CAU China</a></li>
-      <li><a href="https://2020.igem.org/Team:Lethbridge/Members">2020 Lethbridge</a></li>
-    </ul>
-  </div>
-</div>
-
+</body>
 {% endblock %}

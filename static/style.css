@@ -305,11 +305,7 @@
   
   /* end image gallery */
  
-div.image-gallery {
-  display: flex;
-  background-color: #C6EDC3;
-}
-
-div.image-gallery img {
-  width: 50%;
-}
+  iframe {
+    display: block;
+    margin: 0px auto;
+  }

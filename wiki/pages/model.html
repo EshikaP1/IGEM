@@ -1,41 +1,158 @@
-{% extends "layout.html" %}
+{% extends "layout.html" %} {% block title %}Modeling{% endblock %} {% block
+  lead %}{% endblock %} {% block page_content %}
   
-{% block title %}Model{% endblock %}
-{% block lead %}Explain your model's assumptions, data, parameters, and results in a way that anyone could understand.{% endblock %}
-
-{% block page_content %}
-
-<div class="row mt-4">
-  <div class="col">
-    <div class="bd-callout bd-callout-info">
-      <h4>Best Model</h4>
-      <p>Models and computer simulations provide a great way to describe the functioning and operation of BioBrick Parts and Devices. Synthetic biology is an engineering discipline and part of engineering is simulation and modeling to determine system behavior before building your design. Designing and simulating can be iterated many times in a computer before moving to the lab. This award is for teams who build a model of their system and use it to inform system design or simulate expected behavior before or in conjunction with experiments in the wetlab.</p>
-      <p>To compete for the Best Model prize, please describe your work on this page and also fill out the description on the <a href="https://competition.igem.org/deliverables/judging-form">judging form</a>.</p>
-      <hr>
-      <p>Please see the <a href="https://competition.igem.org/judging/awards">2023 Awards Page</a> for more information.</p>
-    </div>
+  <div style="background-color: #C6EDC3" class="box fade-in">
+      <h1 class="heading fade-in">Goal and Overview</h1>
+      <hr class="fade-in" />
+      <p class="paragraph fade-in">
+          As our project is focused on the detection of TPA for monitoring PET degradation, we 
+          decided to model the predicted binding of TPA to the importer proteins to better understand 
+          the processes occurring during experimentation. We also decided to compare the structures of 
+          the two importer proteins, MucK and TpaK, to visualize their similarities. 
+      </p>
+	<p class="paragraph fade-in">
+        For our iGEM project, we used modeling to visualize the interactions between the biological 
+        molecules of relevance. We docked terephthalic acid (also known as P-Phthalate or TPA) on to 
+        both the TpaK and MucK importers. In addition, we also docked TPA on to three additional 
+        proteins that have identified to be binding targets of the ligand, namely mono(2-hydroxyethyl) 
+        terephthalate hydrolase, terephthalate 1,2-dioxygenase, terminal oxygenase component subunit 
+        alpha 1, and terephthalate 1,2-dioxygenase, and terminal oxygenase component subunit alpha 2. 
+    </p>
   </div>
-</div>
-
-<div class="row mt-4">
-  <div class="col-lg-8">
-    <h2>Overview</h2>
-    <hr>
-    <p>Mathematical models and computer simulations provide a great way to describe the function and operation of Parts and Devices. Synthetic Biology is an engineering discipline, and part of engineering is simulation and modeling to determine the behavior of your design before you build it. Designing and simulating can be iterated many times in a computer before moving to the lab.</p>
+<div style="background-color: #C6EDC3" class="box fade-in">
+    <h1 class="heading fade-in">Docking terephthalic acid (TPA) to importers of interest</h1>
+    <hr class="fade-in" />
+    <p class="paragraph fade-in">
+        We began by acquiring the PDB files of tpaK and mucK from the online database AlphaFold, 
+        as well as the ZINC Accession ID of terephthalic acid from the online ZINC database. 
+        Two independent docking jobs were then submitted to the Swissdock docking platform, the 
+        first with TPA as the ligand and mucK (Cis,cis-muconate transport protein) as the receptor, 
+        and the second with tpaK (aromatic acid transporter) as the ligand. A prediction folder for 
+        each was then exported from Swissdock.
+    </p>
+   <p class="paragraph fade-in">
+        The docking was visualized on PyMol, using two PDB files that were acquired from the Swissdock 
+        prediction folder. The first file visualized the receptor on PyMol, and the second file visualized 
+        the sites upon the ligand which TPA would be likely to bind to. The molecule was then visualized in 
+        movement which was captured in a GIF.
+    </p>
+<br />
+<iframe title="model1" width="560" height="315" src="https://video.igem.org/videos/embed/34ca5af7-59aa-42d5-99df-c6175ee65906" frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups" class="center"></iframe>
+    <p class="caption fade-in">
+        TPA ligand (pictured in cyan) docked on to the tpaK importer (pictured in orange).
+    </p>
+<iframe title="model2" width="560" height="315" src="https://video.igem.org/videos/embed/b4da9083-23f5-4961-957a-b3ab780864a5" frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups" class="center"></iframe>
+    <p class="caption fade-in">
+        TPA ligand (pictured in cyan) docked on to the mucK importer (pictured in pink).
+    </p>
+   <p class="paragraph fade-in">
+        Our team expected optimal TPA binding to take place in the defined cavity at the center of the 
+        MucK and TpaK membrane proteins, through which TPA is generally thought to be transported. However, 
+        as shown above, the predicted residues for binding lay on the exterior of the protein, away from the 
+        cavity. This may support our experimental results in showing that increasing MucK expression has 
+        little influence on the biosensor signal and transportation of TPA. To further explore these unexpected 
+        binding patterns, TPA’s general binding patterns to other known proteins was observed.
+    </p>
   </div>
-  <div class="col-lg-4">
-    <h2>Inspirations</h2>
-    <hr>
-    <ul>
-      <li><a href="http://2018.igem.org/Team:GreatBay_China/Model">2018 GreatBay China</a></li>
-      <li><a href="http://2018.igem.org/Team:Leiden/Model">2018 Leiden</a></li>
-      <li><a href="https://2019.igem.org/Team:IISER_Kolkata/Model">2019 IISER Kolkata</a></li>
-      <li><a href="https://2019.igem.org/Team:Exeter/Model">2019 Exeter</a></li>
-      <li><a href="https://2019.igem.org/Team:Mingdao/Model">2019 Mingdao</a></li>
-      <li><a href="https://2020.igem.org/Team:Harvard/Model">2020 Harvard</a></li>
-      <li><a href="https://2020.igem.org/Team:Leiden/Model">2020 Leiden</a></li>
-    </ul>
+<div class="box fade-in">
+    <h1 class="heading fade-in">Docking terephthalic acid (TPA) to known binding proteins</h1>
+    <hr class="fade-in" />
+    <p class="paragraph fade-in">
+        We first identified proteins known to bind to TPA by searching on the public database UniProt with the 
+        keywords “small molecule,” “PDB,” and the InChIKey for TPA: KKEYFWRCBNTPAC-UHFFFAOYSA-NW.  
+    </p>
+   <p class="paragraph fade-in">
+        We then selected the top 3 most compatible proteins, namely mono(2-hydroxyethyl) terephthalate hydrolase; 
+        terephthalate 1,2-dioxygenase, terminal oxygenase component subunit alpha 1; and terephthalate 1,2-dioxygenase, 
+        terminal oxygenase component subunit alpha 2. The AlphaFold structures were identified for the above proteins, 
+        and the succeeding molecular docking steps were identical to the ones outlined in the previous section. The 
+        docking of these proteins to TPA can be seen below. 
+    </p>
+<br />
+<iframe title="model#3" width="560" height="315" src="https://video.igem.org/videos/embed/dc9bf3a4-8750-4297-ab3e-91d8c2c4e57b" frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups" class="center"></iframe>
+    <p class="caption fade-in">
+        TPA ligand (pictured in cyan) docked on to mono(2-hydroxyethyl) terephthalate hydrolase (pictured in yellow).
+    </p>
+ <br />
+<iframe title="model4" width="560" height="315" src="https://video.igem.org/videos/embed/b60f578a-294b-4609-aa0d-62173627926f" frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups" class="center"></iframe>
+    <p class="caption fade-in">
+        TPA ligand (pictured in cyan) docked on to terephthalate 1,2-dioxygenase, terminal oxygenase component subunit alpha 1 (pictured in navy blue).
+    </p>
+<br />
+<iframe title="model5" width="560" height="315" src="https://video.igem.org/videos/embed/962bc8d0-834b-4e7b-92dd-2f1fc82c4261" frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups" class="center"></iframe>
+    <p class="caption fade-in">
+        TPA ligand (pictured in cyan) docked on to terephthalate 1,2-dioxygenase, terminal oxygenase component subunit alpha 2 (pictured in olive yellow).
+    </p>
+<br />
+   <p class="paragraph fade-in">
+        As shown in the figures above, the molecular docking software consistently shows the binding of TPA to the exterior 
+        of the proteins, even the proteins that are known to transport TPA. This may imply that TPA generally binds to 
+        the exterior rather than interior of its receptors depending on its affinity to certain residues with bonding 
+        and electrostatic forces. However, it is important to keep in mind the several potential sources of error in 
+        modeling, possibly due to the membrane proteins being embedded in lipid bilayers rather than freely moving in 
+        aqueous solutions and inconsistencies with the algorithm. Despite this, if the predicted binding is accurate, 
+        this may just be the regular binding pattern of TPA and different mutations on the importers would need to be 
+        explored to achieve more efficient transportation. Ultimately, it is difficult to conclude anything solely from 
+        the docking results. Wet lab experimentation could be used in the future to confirm or refute these results.
+    </p>
   </div>
-</div>
+  <div class="box fade-in">
+      <h1 class="heading fade-in">Identifying mutated residues in MucK importer</h1>
+      <hr class="fade-in" />
+      <p class="paragraph fade-in">
+          Our team’s wet lab experimentation used a previously-mutated version of MucK from past literature that aimed 
+          to improve the success of the transporter. A M34L mutation, changing the DNA sequence from ATG to CTC, and a 
+          T342L mutation, changing the DNA sequence from ACC to ATC, had been done to the original MucK transporter. 
+          In order to better understand the effect of these mutations on the transportation of TPA, their residues 
+          were mapped onto the protein structure. The AlphaFold MucK PDB file was once again visualized using PyMOL 
+          and the sequence was inputted into ExPASy to identify the sites of mutation. The individual mutated residues 
+          were then located and highlighted on the 3D model. 
+      </p>
+  </div>
+<iframe title="model6" width="560" height="315" src="https://video.igem.org/videos/embed/e48d9bc6-c85a-4522-af29-f3d43dc02cb6" frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups" class="center"></iframe>
+    <p class="paragraph fade-in">
+        MucK importer (pictured in pink) with highlighted M34L and T342L mutations (pictured in green)
+    </p>
+  </div>
+   <p class="paragraph fade-in">
+        As expected, the mutations mapped onto the interior of the protein, exposed to the central cavity, 
+        as TPA is generally believed to bind near those residues. However, the mutation did not overlap 
+        with any of the predicted binding sites from molecular docking, which were mainly located on the 
+        exterior of the protein. Once again, this could be due to some errors in the docking computational 
+        algorithm. 
+    </p>
+  </div>
 
+<div class="box fade-in">
+    <h1 class="heading fade-in">Structural comparison of MucK and TpaK importer proteins</h1>
+    <hr class="fade-in" />
+    <p class="paragraph fade-in">
+        The MucK structure was then overlaid onto the TpaK AlphaFold PDB file using PyMOL to compare the 
+        physical structures of both importers. The structures had an Root Mean Square Deviation (RMSD) 
+        value of 1.750Å, which implies their high structural similarity and supports their similar functionality. 
+        This indicates that there are only slight differences in structure that account for varying levels of 
+        success between the two importers.  
+    </p>
+<br />
+<iframe title="model7" width="560" height="315" src="https://video.igem.org/videos/embed/47a0efce-7904-4411-8494-c93d0d2f69ab" frameborder="0" allowfullscreen="" sandbox="allow-same-origin allow-scripts allow-popups" class="center"></iframe>
+    <p class="paragraph fade-in">
+        Superimposition of MucK (pictured in pink) and TpaK (pictured in orange) transporters, with MucK mutations highlighted (pictured in green)
+    </p>
+<br />
+   <p class="paragraph fade-in">
+        As MucK and TpaK have high structural similarity, in the future we can explore the potential effect 
+        of mutating TpaK in the same way as MucK was mutated in previous papers. The M34L and T342L mutations 
+        in MucK align with the M and G residues, respectively, in the same positions on the TpaK sequence.
+    </p>
+  </div>
+  <div style="background-color: #C6EDC3" class="box fade-in">
+      <h1 class="heading fade-in">Concluding Remarks</h1>
+      <hr class="fade-in" />
+      <p class="paragraph fade-in">
+          Overall, modeling the interactions of the importers amongst each other and with TPA provided more 
+          information about the chemical processes that are occurring in the lab, supported some of our experimental 
+          results, and helped us determine the next steps we can take to continue this research.
+      </p>
+  </div>
+  
 {% endblock %}
